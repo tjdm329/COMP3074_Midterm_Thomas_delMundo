@@ -30,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
         });
-
         //connect to main activity
         number = findViewById(R.id.ETnumber);
         genTable = findViewById(R.id.btnGenTable);
@@ -40,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
         //listen to button
         results.setOnClickListener(v -> calculateResults());
-
-
     }
 
     private void calculateResults() {
+        //get input
         String n = number.getText().toString().trim();
 
+        //validation check
         if(!n.isEmpty()){
             addToTable(Integer.parseInt(n));
         } else {
@@ -69,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1,
                 resultsTable
         );
-
         // show the results onto the table
         results.setAdapter(adapter);
     }
