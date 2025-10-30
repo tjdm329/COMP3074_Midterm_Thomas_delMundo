@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         results = findViewById(R.id.results);
 
         //listen to button
-        results.setOnClickListener(v -> calculateResults());
+        genTable.setOnClickListener(v -> calculateResults());
     }
 
     private void calculateResults() {
